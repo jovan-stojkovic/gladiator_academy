@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const Navbar = ({ generalMotion, navlinksMotion, topScroll }) => {
   const navLinks = [
-    "navlink 1",
-    "navlink 2",
-    "navlink 3",
-    "navlink 4",
-    "navlink 5",
+    "o nama",
+    "zakaži trening",
+    "galerija",
+    "oprema",
+    "online"
   ];
 
   return (

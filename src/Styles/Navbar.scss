@@ -5,8 +5,8 @@ nav {
   width: 100%;
   padding: 0 2vw;
   @include flex($justify: space-between, $align: start);
-  position: fixed;
-  width: 100vw;
+  position: absolute;
+  width: 100%;
   z-index: 1000;
 
   .logo-cont {
@@ -42,13 +42,26 @@ nav {
       letter-spacing: 2px;
       cursor: pointer;
       transition: all 0.5s;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        background: $red;
+        transition: width 0.3s;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
 
       &.active {
         color: red;
-      }
-
-      &:hover {
-        color: orange;
       }
     }
   }
